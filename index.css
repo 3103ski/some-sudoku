@@ -1,16 +1,16 @@
 .sudoku-board-main {
   display: flex;
   flex-wrap: wrap;
-  width: 270px;
+  width: 360px;
 }
 .sudoku-board-main .sudoku-collection-block {
   display: flex;
   flex-wrap: wrap;
-  width: 90px;
+  width: 120px;
 }
 .sudoku-board-main .collection-inner-block {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
