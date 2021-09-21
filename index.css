@@ -1,0 +1,26 @@
+.sudoku-board-main {
+  display: flex;
+  flex-wrap: wrap;
+  width: 270px;
+}
+.sudoku-board-main .sudoku-collection-block {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90px;
+}
+.sudoku-board-main .collection-inner-block {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid 1px grey;
+  box-sizing: border-box;
+}
+.sudoku-board-main .collection-inner-block .inner-block-number {
+  color: black;
+  padding: 0;
+  margin: 0;
+}
+
+/*# sourceMappingURL=index.css.map */

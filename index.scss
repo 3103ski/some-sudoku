@@ -1,0 +1,29 @@
+$block-size: 30px;
+$border-color: grey;
+$num-color: black;
+
+.sudoku-board-main {
+	display: flex;
+	flex-wrap: wrap;
+	width: $block-size * 9;
+	.sudoku-collection-block {
+		display: flex;
+		flex-wrap: wrap;
+		width: $block-size * 3;
+	}
+	.collection-inner-block {
+		width: $block-size;
+		height: $block-size;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: solid 1px $border-color;
+		box-sizing: border-box;
+
+		.inner-block-number {
+			color: $num-color;
+			padding: 0;
+			margin: 0;
+		}
+	}
+}
