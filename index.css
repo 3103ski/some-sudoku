@@ -2,6 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   width: 360px;
+  margin: 50px auto 15px auto;
 }
 .sudoku-board-main .sudoku-collection-block {
   display: flex;
@@ -21,6 +22,16 @@
   color: black;
   padding: 0;
   margin: 0;
+}
+
+.sudoku-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  margin: 0 20px;
 }
 
 /*# sourceMappingURL=index.css.map */

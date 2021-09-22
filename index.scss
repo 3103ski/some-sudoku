@@ -6,6 +6,7 @@ $num-color: black;
 	display: flex;
 	flex-wrap: wrap;
 	width: $block-size * 9;
+	margin: 50px auto 15px auto;
 	.sudoku-collection-block {
 		display: flex;
 		flex-wrap: wrap;
@@ -26,4 +27,14 @@ $num-color: black;
 			margin: 0;
 		}
 	}
+}
+
+.sudoku-buttons {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+button {
+	margin: 0 20px;
 }
