@@ -193,6 +193,4 @@ function generateSudoku() {
 	return sudoku;
 }
 
-let sudoku = generateSudoku();
-
-export { sudoku, generateSudoku };
+// export { sudoku, generateSudoku };

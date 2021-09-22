@@ -5,7 +5,10 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Sudoku</title>
+
+		<!-- build:css index.css -->
 		<link rel="stylesheet" href="./index.css" />
+		<!-- endbuild -->
 	</head>
 	<body>
 		<div class="sudoku-board-main"></div>
@@ -14,5 +17,8 @@
 			<button id="newPuzzle">New Board</button>
 		</div>
 	</body>
-	<script type="module" src="./index.js"></script>
+	<!-- build:js js/index.js -->
+	<script src="./sudokuGenerator.js"></script>
+	<script src="./index.js"></script>
+	<!-- endbuild -->
 </html>

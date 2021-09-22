@@ -3,15 +3,27 @@
   "version": "1.0.0",
   "description": "A simple sudoku generator",
   "main": "index.html",
+  "engines": {
+    "node": "12.9.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "lite": "lite-server",
     "start": "npm run lite",
-    "lite": "lite-server"
+    "usemin": "usemin index.html -d dist --htmlmin -o dist/index.html",
+    "clean": "rimraf dist",
+    "build": "npm run clean && npm run usemin",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Bryan Jastrzembski",
   "license": "ISC",
   "devDependencies": {
     "lite-server": "^2.6.1",
-    "sass": "^1.41.1"
+    "parallelshell": "^3.0.2",
+    "sass": "^1.41.1",
+    "rimraf": "^3.0.2",
+    "usemin-cli": "^0.6.0"
+  },
+  "dependencies": {
+    "copyfiles": "^2.4.1"
   }
 }

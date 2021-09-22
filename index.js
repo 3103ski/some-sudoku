@@ -1,6 +1,6 @@
-import { generateSudoku, sudoku } from './sudokuGenerator.js';
+// import { generateSudoku } from './sudokuGenerator.js';
 
-let sudokuAnswers = generateSudoku();
+var sudokuAnswers = generateSudoku();
 
 function generateBoard(difficulty) {
 	const board = document.querySelector('.sudoku-board-main');
@@ -11,10 +11,10 @@ function generateBoard(difficulty) {
 		var p = document.createElement('p');
 
 		boxOuter.setAttribute('class', 'collection-inner-block');
-		boxOuter.setAttribute('id', `block-${i}`);
+		boxOuter.setAttribute('id', 'block-' + i);
 
 		p.setAttribute('class', 'inner-block-number');
-		p.setAttribute('id', `number-${i}`);
+		p.setAttribute('id', 'number-' + i);
 
 		boxOuter.appendChild(p);
 
@@ -24,8 +24,8 @@ function generateBoard(difficulty) {
 }
 
 function addClues(difficulty) {
-	let clueCount = 0;
-	let displayed = [];
+	var clueCount = 0;
+	var displayed = [];
 
 	switch (difficulty) {
 		case 'medium':
@@ -39,8 +39,8 @@ function addClues(difficulty) {
 	}
 
 	while (displayed.length <= clueCount) {
-		let randomSpot = Math.floor(Math.random() * 80);
-		let cellEl = document.getElementById(`number-${randomSpot}`);
+		var randomSpot = Math.floor(Math.random() * 80);
+		var cellEl = document.getElementById('number-' + randomSpot);
 		if (!displayed.includes(randomSpot)) {
 			cellEl.textContent = sudokuAnswers[randomSpot];
 			displayed.push(randomSpot);
@@ -49,17 +49,16 @@ function addClues(difficulty) {
 }
 
 function showAnswers() {
-	for (let i = 0; i <= 80; i++) {
-		let el = document.getElementById(`number-${i}`);
+	for (var i = 0; i <= 80; i++) {
+		var el = document.getElementById('number-' + i);
 		el.textContent = sudokuAnswers[i];
 	}
 }
 
-document.getElementById('showAnswers').addEventListener('click', () => {
-	showAnswers();
-});
-document.getElementById('newPuzzle').addEventListener('click', () => {
+document.getElementById('showAnswers').addEventListener('click', showAnswers);
+document.getElementById('newPuzzle').addEventListener('click', function () {
 	sudokuAnswers = generateSudoku();
 	generateBoard();
 });
+
 generateBoard();
